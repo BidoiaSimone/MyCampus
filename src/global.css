@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+@import 'uniwind';
+@import 'panelui-native/theme.css';
+
+/* Senza questa riga i componenti di PanelUI non hanno stile (percorso relativo a questo file). */
+@source '../node_modules/panelui-native/src';
+
+/*
+ * Palette "Welcome" di MyCampus applicata ai token di PanelUI.
+ * È lo specchio di `Colors` in src/theme.ts: se cambiate un colore lì, cambiatelo anche qui.
+ *
+ * Regole di PanelUI: solo valori statici (niente color-mix), e ogni tema deve
+ * definire le stesse variabili, altrimenti la build fallisce.
+ */
+@theme {
+  /* Giallo girasole: uno sfondo o un accento, mai il colore di un testo su sfondo chiaro. */
+  --color-sunflower: unset;
+  --color-sunflower-foreground: unset;
+}
+
+@layer theme {
+  :root {
+    @variant light {
+      --color-background: #ffffff;
+      --color-foreground: #1e1b4b;
+
+      --color-card: #ffffff;
+      --color-card-foreground: #1e1b4b;
+      --color-popover: #ffffff;
+      --color-popover-foreground: #1e1b4b;
+      --color-overlay: #ffffff;
+      --color-overlay-foreground: #1e1b4b;
+
+      --color-primary: #3730a3;
+      --color-primary-foreground: #ffffff;
+
+      /* indaco al 7%: selezioni e superfici tenui */
+      --color-secondary: rgba(55, 48, 163, 0.07);
+      --color-secondary-foreground: #1e1b4b;
+      --color-muted: rgba(55, 48, 163, 0.06);
+      --color-muted-foreground: #5b5b76;
+      --color-accent: rgba(55, 48, 163, 0.08);
+      --color-accent-foreground: #1e1b4b;
+
+      --color-destructive-foreground: #b42318;
+
+      --color-border: #e2e2ef;
+      --color-input: #d6d6e7;
+      --color-ring: #6366f1;
+
+      --color-surface: #f4f4fb;
+      --color-surface-secondary: #ececf7;
+      --color-surface-tertiary: #e2e2ef;
+
+      --color-chart-1: #3730a3;
+      --color-chart-4: #ffc93c;
+
+      --color-sunflower: #ffc93c;
+      --color-sunflower-foreground: #1e1b4b;
+    }
+
+    @variant dark {
+      --color-background: #0f0e1f;
+      --color-foreground: #ffffff;
+
+      --color-card: #16152b;
+      --color-card-foreground: #ffffff;
+      --color-popover: #1c1b33;
+      --color-popover-foreground: #ffffff;
+      --color-overlay: #23223d;
+      --color-overlay-foreground: #ffffff;
+
+      --color-primary: #a5b4fc;
+      --color-primary-foreground: #1e1b4b;
+
+      --color-secondary: rgba(165, 180, 252, 0.1);
+      --color-secondary-foreground: #ffffff;
+      --color-muted: rgba(165, 180, 252, 0.08);
+      --color-muted-foreground: #b4b4cc;
+      --color-accent: rgba(165, 180, 252, 0.12);
+      --color-accent-foreground: #ffffff;
+
+      --color-destructive-foreground: #fda29b;
+
+      --color-border: #2e2d4a;
+      --color-input: #3a3957;
+      --color-ring: #818cf8;
+
+      --color-surface: #1c1b33;
+      --color-surface-secondary: #23223d;
+      --color-surface-tertiary: #2a2946;
+
+      --color-chart-1: #a5b4fc;
+      --color-chart-4: #ffc93c;
+
+      --color-sunflower: #ffc93c;
+      --color-sunflower-foreground: #1e1b4b;
+    }
+  }
+}
